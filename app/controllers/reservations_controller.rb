@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.photographer = @photographer
-    # @reservation.user_id = session[:user_id]
+    @reservation.user_id = session[:user_id]
 
     if @reservation.save
       redirect_to [@photographer, @reservation], :notice => 'Reservation created with success'
@@ -52,6 +52,6 @@ class ReservationsController < ApplicationController
 
   private
   def reservation_params
-    params.require(:reservation).permit(:user_id, :photographer_id, :party_size, :date, :time, :comment)
+    params.require(:reservation).permit(:user_id, :photographer_id, :date, :time, :comment)
   end
 end

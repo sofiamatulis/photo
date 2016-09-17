@@ -1,10 +1,6 @@
 
 <div class="show-image">
-  <% if @photographer.photo == "" %>
-        <%= image_tag "image.jpg" %><br>
-      <% else %>
-        <%= image_tag @photographer.photo %><br />
-      <% end %>
+
   <h1><%= @photographer.name %></h1>
   <div class="button"><%= link_to "Make a Reservation", new_photographer_reservation_url(@photographer) %></div>
 </div>
@@ -12,5 +8,4 @@
   <h4>Address: <%= @photographer.address %></h4><br />
   <h4>Phone: <%= @photographer.phone %></h4><br />
   <h4>Website: <%= @photographer.website %></h4><br />
-  <h4>Hours of Operation: <%= @photographer.opening_hours.strftime("%I %p") %> - <%= @photographer.closing_hours.strftime("%I %p") %></h4>
 </div>

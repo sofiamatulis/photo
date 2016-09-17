@@ -1,6 +1,6 @@
 <div class= "mn_img_container">
   <div id = "main-image">
-    <%= image_tag("http://olindaschool.com.br/conteudo/uploads/2014/10/cameras.jpg") %>
+    <%= image_tag("http://www.hercampus.com/sites/default/files/2013/02/27/topic-1350661050.jpg") %>
     <div id = "image-text-header">Good friends. Good photos</div>
     <div id = "image-subtext">Make a Reservation.</div>
     <div class="search">
@@ -15,15 +15,10 @@
 <div class="list-container">
   <% @photographers.each do |photographer| %>
   <ul class="list-items">
-    <li id="image">
-      <% if photographer.photo == "" %>
-        <%= link_to image_tag('image.jpg'), photographer_path(photographer) %>
-      <% else %>
-        <%= link_to image_tag(photographer.photo), photographer_path(photographer) %><br>
-      <% end %>
+
     <li id="name"><h2><%= link_to photographer.name, photographer_path(photographer) %></h2></li>
     <li id="address">
-       <h4><%=image_tag "location_icon.png"%> <%= photographer.address %></h4>
+       <h4><%=image_tag "http://prophotography101.com/wp-content/uploads/2010/10/nikon-d200-pro-digital-camera.jpg"%> <%= photographer.address %></h4>
     </li>
   </ul>
   <% end %>

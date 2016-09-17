@@ -66,10 +66,11 @@ end
 
 private
 def photographer_params
-  # params.require(:photographer.permit(:name, :address, :phone, :opening_hours, :closing_hours, :website, :photo)
+  params.require(:photographer).permit(:name, :address, :phone, :website)
 end
 
 def find_user
   @user = User.find(params[:user_id])
 end
+
 end

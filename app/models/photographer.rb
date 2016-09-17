@@ -5,4 +5,11 @@ class Photographer < ApplicationRecord
   # belongs_to :owner, class_name: "User", inverse_of: :owned_photographers
 
   # validates :
+
+  def self.search(search)
+  where("name LIKE ?", "%#{search}%")
+  where("name LIKE ?", "%#{search}%")
+end
+
+
 end
