@@ -1,0 +1,30 @@
+<div class= "mn_img_container">
+  <div id = "main-image">
+    <%= image_tag("http://olindaschool.com.br/conteudo/uploads/2014/10/cameras.jpg") %>
+    <div id = "image-text-header">Good friends. Good photos</div>
+    <div id = "image-subtext">Make a Reservation.</div>
+    <div class="search">
+      <%= form_tag(photographers_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search by Name" %>
+        <span class="actions"><%= submit_tag "Search" %></span>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="list-container">
+  <% @photographers.each do |photographer| %>
+  <ul class="list-items">
+    <li id="image">
+      <% if photographer.photo == "" %>
+        <%= link_to image_tag('image.jpg'), photographer_path(photographer) %>
+      <% else %>
+        <%= link_to image_tag(photographer.photo), photographer_path(photographer) %><br>
+      <% end %>
+    <li id="name"><h2><%= link_to photographer.name, photographer_path(photographer) %></h2></li>
+    <li id="address">
+       <h4><%=image_tag "location_icon.png"%> <%= photographer.address %></h4>
+    </li>
+  </ul>
+  <% end %>
+</div>
