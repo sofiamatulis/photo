@@ -3,7 +3,7 @@ class CreatePhotographers < ActiveRecord::Migration[5.0]
     create_table :photographers do |t|
       t.string :name
       t.string :address
-      t.number :phone
+      t.string :phone
       t.string :website
       t.string :category
 
