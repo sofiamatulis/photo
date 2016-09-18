@@ -15,7 +15,7 @@ end
 end
 
 def show
-  @Photographer = Photographer.find(params[:id])
+  @photographer = Photographer.find(params[:id])
 end
 
 def new

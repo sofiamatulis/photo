@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   root 'photographers#index'
 
-get 'photographers/:photographer_id/photographers/viewall' => 'reservations#viewall', as: :viewall
+get 'photographers/:photographer_id/reservations/viewall' => 'reservations#viewall', as: :viewall
 
 
 
