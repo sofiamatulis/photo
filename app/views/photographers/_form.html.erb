@@ -12,17 +12,6 @@
 </div>
 <% end %>
 
-  <%if @photographer.errors.any? %>
-  <div id="error explanation">
-    <h2><%= pluralize(@photographer.errors.count, "error") %> prohibited this photographer from being saved:</h2>
-
-    <ul>
-      <% @photographer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <%end%>
-    </ul>
-  </div>
-  <% end %>
 
   <div class ="field">
     <%= f.label :name %><br />
@@ -44,15 +33,6 @@
     <%=f.text_field :website %>
   </div>
 
-  <div class ="field">
-    <%=f.label :opening_hours %><br />
-    <%=f.time_select :opening_hours, ampm: true, discard_minute: true %>
-  </div>
-
-  <div class ="field">
-    <%=f.label :closing_hours %><br />
-    <%=f.time_select :closing_hours, ampm: true, discard_minute: true %>
-  </div>
 
   <div class ="field">
     <%=f.label :website %><br />

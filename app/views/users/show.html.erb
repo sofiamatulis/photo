@@ -34,20 +34,20 @@
   <% end %>
 </div>
 
-<div class = "profile-title">Your Restaurants</div>
-<div class="button" id="new-restaurant">
-  <%= link_to "Create a new restaurant", new_user_restaurant_path(@user) %>
+<div class = "profile-title">Your Photography profile</div>
+<div class="button" id="new-photographer">
+  <%= link_to "Create a new photographer", new_user_photographer_path(@user) %>
 </div>
 
-<div class="restaurantlist">
-  <% @user.owned_restaurants.each do |restaurant| %>
-  <div class="restaurant">
-    <div id="restaurant-info">
-      <h2><%= restaurant.name %></h2>
+<div class="photographerlist">
+  <% @user.owned_photographers.each do |photographer| %>
+  <div class="photographer">
+    <div id="photographer-info">
+      <h2><%= photographer.name %></h2>
       <div class="button" id="owner-function">
-        <%= link_to "View Restaurant Details", restaurant_path(restaurant) %>
-        <%= link_to "View All Reservations", viewall_path(restaurant) %>
-        <%= link_to 'Edit Information', edit_restaurant_path(restaurant) %>
+        <%= link_to "View Photographer Details", photographer_path(photographer) %>
+        <%= link_to "View All Reservations", viewall_path(photographer) %>
+        <%= link_to 'Edit Information', edit_photographer_path(photographer) %>
       </div>
     </div>
   </div>

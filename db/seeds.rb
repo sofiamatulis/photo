@@ -8,3 +8,5 @@
 
 
 Photographer.create(name: 'Anna', address: '1234 Food Street', phone: '416 123 1234', website: 'www.italianfood.com', category: 'weddings')
+
+User.create(name: 'Natalie', phone: '416-787-9898', email: 'natalie@gmail.com', password: '12', password_confirmation: '12')

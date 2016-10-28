@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
-        redirect_to restaurants_url, notice: "Account sucessfully created!"
+        redirect_to photographers_url, notice: "Account sucessfully created!"
       else
         render "new"
       end

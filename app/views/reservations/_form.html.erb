@@ -11,21 +11,14 @@
     </ul>
   </div>
   <% end %>
-<!-- 
-  <div class ="field">
-    <%= f.label :party_size %><br />
-    <%= f.text_field :party_size %>
-  </div> -->
+
 
   <div class ="field">
     <%= f.label :date %><br />
     <%= f.date_field :date %>
   </div>
 
-  <div class ="field">
-    <%=f.label :time %><br />
-    <%=f.time_select :time, start_hour:@photographer.opening_hours.hour , end_hour:@photographer.closing_hours.hour , ampm: true, discard_minute: true %>
-  </div>
+
 
   <div class ="field">
     <%=f.label :comment %><br />
