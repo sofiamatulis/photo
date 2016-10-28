@@ -10,12 +10,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    session[:user_id] = @user.id
       if @user.save
         redirect_to photographers_url, notice: "Account sucessfully created!"
       else
         render "new"
       end
   end
+
+
 
   def edit
     @user = User.find(params[:id])
