@@ -1,3 +1,36 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.log-in-form, #user-form, .sign-up-form{
+  font-family: 'Open Sans', sans-serif;
+  margin:auto;
+  margin-top: 8%;
+  margin-bottom: 70px;
+  width: 300px;
+  padding: 50px 30px;
+  background-color:lightblue;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.log-in, .sign-up{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+input {
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: black;
+  background-color: lightblue;
+  font-family: 'Open Sans', sans-serif;
+  border: 0.2px solid #fff;
+  box-shadow: 2px 2px 5px #AFE9FF;
+  transition-duration: 0.5s;
+}
