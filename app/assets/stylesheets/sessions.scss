@@ -4,15 +4,17 @@
 
 
 .log-in-form, #user-form, .sign-up-form{
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin:auto;
   margin-top: 8%;
   margin-bottom: 70px;
   width: 300px;
   padding: 50px 30px;
-  background-color:lightblue;
+  background-color:#FFE1E6;
   opacity: 0.8;
   text-align: center;
+  height:100%;
+
 }
 
 .log-in, .sign-up{
@@ -20,6 +22,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-image: url('https://iso.500px.com/wp-content/uploads/2016/03/pedroquintela.jpg');
+
+
 }
 
 input {
@@ -28,9 +33,40 @@ input {
   padding: 5px 8px;
   cursor: pointer;
   color: black;
-  background-color: lightblue;
+  background-color: #FFE1E6;
   font-family: 'Open Sans', sans-serif;
   border: 0.2px solid #fff;
-  box-shadow: 2px 2px 5px #AFE9FF;
+  box-shadow: 2px 2px 5px #FFAEBC;
   transition-duration: 0.5s;
 }
+
+.field {
+  padding:7px;
+}
+.userinfo {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  display:block;
+  background-color: #FFE1E6;
+  padding: 20px;
+  margin: 0;
+  height: 10px;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+  width:100%;
+  top:0;
+
+}
+
+a.userinfo:visited {
+  color:white;
+
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+ a {
+   text-decoration: none;
+ }
