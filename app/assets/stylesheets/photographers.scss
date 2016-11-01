@@ -1,3 +1,19 @@
 // Place all the styles related to the Photographers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#image_main_page {
+  width:105%;
+  height:700px;
+}
+
+#logo {
+content: url('http://www.underconsideration.com/brandnew/archives/500px_logo_detail.png');
+  display: inline;
+    position: relative;
+    left: 83%;
+    height: 50px;
+    bottom: 50px;
+
+}
