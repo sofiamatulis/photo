@@ -1,5 +1,5 @@
 <div class="show-image">
-    <%= image_tag "https://meetthenew.500px.com/downloads/500px_wallpaper_desktop.jpg" %><br />
+    <%#= image_tag "https://meetthenew.500px.com/downloads/500px_wallpaper_desktop.jpg" %><br />
     <h1><%= @user.name %></h1>
     <div class="button"><%= link_to "Edit Profile", edit_user_path(@user) %>
   </div>
@@ -40,7 +40,7 @@
 </div>
 
 <div class="photographerlist">
-  <% @user.owned_photographers.each do |photographer| %>
+  <% @user.photographers.each do |photographer| %>
   <div class="photographer">
     <div id="photographer-info">
       <h2><%= photographer.name %></h2>

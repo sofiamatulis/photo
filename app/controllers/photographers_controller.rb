@@ -28,7 +28,7 @@ end
 
 def create
   @photographer = Photographer.new(photographer_params)
-  @photographer.owner_id = params[:user_id]
+  # @photographer.owner_id = params[:user_id]
   if @photographer.save
     redirect_to [@user, @photographer]
   else
@@ -47,21 +47,22 @@ end
 
 def destroy
   @photographer= Photographer.find(params[:id])
-  owner = @photographer.owner_id
+  # owner = @photographer.owner_id
   @photographer = @photographer.reservations
   @photographer.destroy
   @photographer.destroy
-  redirect_to user_path(owner)
+  redirect_to user_path
+  # (owner)
 end
 
-def owner_show_page
-  @photographer = Photographer.find_by(@user)
+# def owner_show_page
+#   @photographer = Photographer.find_by(@user)
+#
+# end
 
-end
-
-def default_photo
-  'image.jpg'
-end
+# def default_photo
+#   'image.jpg'
+# end
 
 
 private
