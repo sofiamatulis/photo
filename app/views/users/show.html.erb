@@ -20,7 +20,6 @@
   <div class="reservation">
     <p id="reservation-info">
        Photographer: <%= Photographer.find(reservation.photographer_id).name %><br>
-       Party Size: <%= reservation.party_size %><br>
        Date: <%= reservation.date %><br>
        Time: <%= reservation.time.strftime("%I %p") %><br>
        Special Requests: <%= reservation.comment %><br>

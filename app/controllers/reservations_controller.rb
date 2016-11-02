@@ -1,7 +1,6 @@
 class ReservationsController < ApplicationController
   before_action do
     @photographer = Photographer.find(params[:photographer_id])
-
   end
 
   def index
